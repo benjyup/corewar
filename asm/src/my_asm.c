@@ -5,7 +5,7 @@
 ** Login   <mesqui_v@epitech.net>
 **
 ** Started on  Thu Mar 17 16:23:06 2016 vincent mesquita
-** Last update Sat Mar 26 22:09:21 2016 vincent mesquita
+** Last update Sun Mar 27 20:26:07 2016 Vincent Florian
 */
 
 #include <stdlib.h>
@@ -86,36 +86,6 @@ static int	my_fill_header_and_op(t_header *header,
       free(line);
     }
   return (0);
-}
-
-void		aff_first(t_first *label)
-{
-  t_label	*current;
-
-  my_putchar('\n');
-  my_put_nbr(label->ps);
-  current = label->root->next;
-  while (current != label->root)
-    {
-      my_putstr(current->label);
-      my_putstr(" | ");
-      my_put_nbr(current->position);
-      my_putchar('\n');
-      current = current->next;
-    }
-}
-
-void		aff_label(t_int *label)
-{
-  t_int		*current;
-
-  current = label->next;
-  while (current != label)
-    {
-      my_put_nbr(current->pos);
-      my_putchar('\n');
-      current = current->next;
-    }
 }
 
 int		my_asm(char *filename)

@@ -1,11 +1,11 @@
 ##
 ## Makefile<corewar> for  in /home/puente_t/rendu/CPE/CPE_2015_corewar
-## 
+##
 ## Made by Timothée Puentes
 ## Login   <puente_t@epitech.net>
-## 
+##
 ## Started on  Wed Mar 16 16:21:03 2016 Timothée Puentes
-## Last update Fri Mar 25 12:21:16 2016 Timothée Puentes
+## Last update Sun Mar 27 21:18:07 2016 Vincent Florian
 ##
 
 NAME	=	corewar
@@ -34,7 +34,7 @@ SRC	=	src/main.c \
 		../Basics/my_putchar.c \
 		../Basics/my_getnbr.c \
 		../Basics/my_strcomp.c \
-		../op.c
+		src/op.c
 
 OBJS	=	$(SRC:.c=.o)
 

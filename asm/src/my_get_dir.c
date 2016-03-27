@@ -5,12 +5,38 @@
 ** Login   <mesqui_v@epitech.net>
 **
 ** Started on  Wed Mar 23 14:20:26 2016 vincent mesquita
-** Last update Sat Mar 26 22:01:06 2016 Vincent Florian
+** Last update Sun Mar 27 20:14:26 2016 Vincent Florian
 */
 
 #include <stdlib.h>
 #include <limits.h>
 #include "asm.h"
+
+int		my_line_is_not_empty(char *str)
+{
+  int		i;
+
+  i = 0;
+  while (str[i])
+    {
+      if (str[i] != ' ' && str[i] != '\t')
+	return (1);
+      i += 1;
+    }
+  return (0);
+}
+
+int		my_get_reg(char *str, t_file_info *fi)
+{
+  int		nbr;
+
+  if ((nbr = my_getnbr(str)) < 1 || nbr > REG_NUMBER)
+    {
+      my_put_error("Asm", fi, "Invalid register number\n");
+      return (-1);
+    }
+  return (nbr);
+}
 
 static int	mine_is_a_label_dir(char *str)
 {

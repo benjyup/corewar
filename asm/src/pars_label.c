@@ -5,27 +5,11 @@
 ** Login   <vincen_s@epitech.net>
 **
 ** Started on  Fri Mar 25 14:52:18 2016 Vincent Florian
-** Last update Sat Mar 26 21:55:31 2016 Vincent Florian
+** Last update Sun Mar 27 20:05:50 2016 Vincent Florian
 */
 
 #include <stdlib.h>
 #include "asm.h"
-
-int	my_strcomp_label(char *s1, char *s2)
-{
-  int	i;
-
-  i = 0;
-  if (s1 == NULL || s2 == NULL)
-    return (-1);
-  while (s2[i] && s2[i] != ':')
-    {
-      if (s1[i] != s2[i])
-	return (-1);
-      i++;
-    }
-  return (1);
-}
 
 int		my_find_after(t_first *first, t_int *l_int, t_label *current)
 {
@@ -131,7 +115,8 @@ t_int		*pars_first(t_first *first)
   t_label	*current;
   t_int		*l_int;
 
-  l_int = my_init_int_list();
+  if ((l_int = my_init_int_list()) == NULL)
+    return (NULL);
   current = first->root->next;
   while (current != first->root)
     {

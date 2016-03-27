@@ -5,11 +5,28 @@
 ** Login   <mesqui_v@epitech.net>
 **
 ** Started on  Fri Mar 25 12:20:18 2016 vincent mesquita
-** Last update Sat Mar 26 13:45:47 2016 Vincent Florian
+** Last update Sun Mar 27 20:18:43 2016 Vincent Florian
 */
 
 #include <stdlib.h>
 #include "asm.h"
+
+char		**my_delete_label(char **wordtab)
+{
+  char		**cpy;
+
+  cpy = NULL;
+  if (wordtab == NULL || wordtab[0] == NULL)
+    return (NULL);
+  if (mine_is_a_label(wordtab[0]))
+    {
+      if ((cpy = my_delete_to_wordtab(wordtab, 0)) == NULL)
+	return (NULL);
+      my_free_wordtab(wordtab);
+      return (cpy);
+    }
+  return (wordtab);
+}
 
 static void	my_epure_comment(char *str)
 {

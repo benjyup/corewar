@@ -5,7 +5,7 @@
 ## Login   <mesqui_v@epitech.net>
 ##
 ## Started on  Thu Mar 17 16:21:56 2016 vincent mesquita
-## Last update Sat Mar 26 19:47:48 2016 Vincent Florian
+## Last update Sun Mar 27 21:17:28 2016 Vincent Florian
 ##
 
 NAME		=	asm
@@ -14,7 +14,7 @@ CC		=	gcc
 
 RM		=	rm -rf
 
-CFLAGS		+=	-W -Wall -Wextra -I../include -g3
+CFLAGS		+=	-W -Wall -Wextra -I../include
 
 SRCS		=	../Basics/my_puterror.c		\
 			../Basics/my_put_error.c	\
@@ -35,9 +35,9 @@ SRCS		=	../Basics/my_puterror.c		\
 			../Basics/my_free_wordtab.c	\
 			../Basics/my_wordtab_cpy.c	\
 			../Basics/my_wordtab_len.c	\
-			./src/my_delete_label.c		\
 			./src/mine_is_a_comment.c	\
-			./src/my_get_reg.c		\
+			./src/my_main_label.c		\
+			./src/init_label.c		\
 			./src/my_get_ind.c		\
 			./src/my_init_list_fonction.c	\
 			./src/pars_label.c		\
@@ -74,8 +74,7 @@ SRCS		=	../Basics/my_puterror.c		\
 			./src/my_endian.c		\
 			./src/my_args_are_valid.c	\
 			./src/my_byte_code.c		\
-			./src/my_line_is_empty.c	\
-			../op.c
+			./src/op.c
 
 OBJS		=	$(SRCS:.c=.o)
 
