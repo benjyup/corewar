@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include "my_basics.h"
 #include "op.h"
-#include "asm.h"
+#include "corewar.h"
 
 int		add_champ(t_mem *mem, char *name, int nb, int champ)
 {

@@ -10,7 +10,7 @@
 
 #include <stdlib.h>
 #include <unistd.h>
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 void		print_live_victory(t_mem *mem,

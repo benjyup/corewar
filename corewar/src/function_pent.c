@@ -8,7 +8,7 @@
 ** Last update Fri Mar 25 16:57:58 2016 Timothée Puentes
 */
 
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 int		get_res_for_di(t_mem *mem, t_process *proc, int place, int *type)

@@ -9,7 +9,7 @@
 */
 
 #include <stdio.h>
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 int		st(t_mem *mem, t_process *proc)

@@ -11,7 +11,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 int		print_hexa(int fd, unsigned char octet, char *base)

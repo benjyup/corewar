@@ -8,7 +8,7 @@
 ** Last update Sat Mar 26 15:20:34 2016 Peixoto Benjamin
 */
 
-#include "asm.h"
+#include "corewar.h"
 
 void		stock_in(unsigned char *mem, char *inst,
 			 int offset, int size)

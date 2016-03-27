@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "op.h"
-#include "asm.h"
+#include "corewar.h"
 
 int		still_alive(t_mem *mem)
 {

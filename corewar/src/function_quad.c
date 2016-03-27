@@ -8,7 +8,7 @@
 ** Last update Fri Mar 25 11:57:33 2016 Timothée Puentes
 */
 
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 int		get_res_for_type(t_mem *mem, t_process *proc, int place, int *type)

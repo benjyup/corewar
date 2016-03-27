@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 t_funct	functions[] =

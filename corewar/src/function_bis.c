@@ -9,7 +9,7 @@
 */
 
 #include <stdlib.h>
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 int		my_fork(t_mem *mem, t_process *proc)

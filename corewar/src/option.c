@@ -12,7 +12,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 int		my_dump_opt(t_mem *mem, char *str, char **av)

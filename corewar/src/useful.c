@@ -8,7 +8,7 @@
 ** Last update Wed Mar 23 13:35:49 2016 Timothée Puentes
 */
 
-#include "asm.h"
+#include "corewar.h"
 
 int		my_endian(int nbr)
 {

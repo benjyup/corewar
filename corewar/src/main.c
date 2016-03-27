@@ -5,14 +5,14 @@
 ** Login   <mesqui_v@epitech.net>
 **
 ** Started on  Mon Mar 14 12:39:22 2016 vincent mesquita
-** Last update Sun Mar 27 18:09:15 2016 Peixoto Benjamin
+** Last update Sun Mar 27 21:35:06 2016 Vincent Florian
 */
 
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "asm.h"
+#include "corewar.h"
 #include "my_basics.h"
 
 char		*my_strcat_vm(char *str1, char *str2, int size1, int size2)
