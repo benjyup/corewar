@@ -1,10 +1,6 @@
 .name           "42"
 .comment        "Just a basic Winner Program"
 
-entree:	live	%42		; entree
-	fork	%:tir
-	ld	%0,r5
-	zjmp	%:bite
 
 tir:	sti	r1,%:tirb,%1
 	ld	%2304,r10
@@ -26,11 +22,11 @@ tirf:	live	%42
 	sti	r10,%-202,%0
 	ld	%0,r11
 	zjmp	%:tirf
-	
+
 tirop:	ld	%368,r2
 	ld	%0,r3
 	ld	%4,r4
-	
+
 tirb:	live	%1
 	sti	r10,%-510,r2
 	sti	r10,%-510,r3
@@ -41,7 +37,7 @@ tirb:	live	%1
 	ld	%0,r11
 	zjmp	%:tirb
 	zjmp	%:infi
-			
+
 p32deb:	zjmp	%0
 	zjmp	%0
 	zjmp	%0
@@ -52,7 +48,7 @@ p32deb:	zjmp	%0
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
-	
+
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
@@ -65,27 +61,9 @@ p32deb:	zjmp	%0
 p32:	sub	r6,r4,r6
 	add	r6,r6,r11
 	ldi	%:p32deb,r6,r7
-	sti	r7,%-510,r11	
-p32li:	live	%1
-	ld	%0,r10
-	sti	r7,%-250,r6
-	zjmp	%-192
+	sti	r7,%-510,r11
 
 tirvd:	zjmp	%:tirvd2
-		
-bite:	sti     r1,%:copie,%2   ; Pour le ld a l'entree
-        ldi     %:copie,%3,r2   ; met le ld a l'entree
-        sti     r2,%:entree,%-4
-        ldi     %:copie,%-1,r2
-        sti     r2,%:entree,%-8
-
-	sti	r1,%:p32li,%1
-	sti	r1,%:b0,%1
-	
-	ld	%0,r2		
-	ld	%8,r3		; prepare les fork
-	ld	%1,r4
-	ld	%0,r6
 
 b0:	live	%1		; boucle fork
 	sub	r3,r4,r3
@@ -111,7 +89,7 @@ top:	live	%42
 	sti	r3,%:p32deb,%-16
 	ld	%0,r3
 	zjmp	%:topd
-	
+
 
 infi:	sti	r1,%:l0,%1
 	sti	r1,%:l1,%1
@@ -141,10 +119,10 @@ l10:	live	%1
 
 p1:	zjmp	%:infi
 
-        live    %0              ; pour boucher l'entree
+	live    %0              ; pour boucher l'entree
 copie:  ld      %1,r1
-	
-	
+
+
 tart:	sti	r1,%:p64li,%1
 	or	r2,r2,r2	; selection vers les modules
 	zjmp	%:p64
@@ -181,7 +159,7 @@ p64deb:	zjmp	%0
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
-	
+
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
@@ -192,7 +170,7 @@ p64deb:	zjmp	%0
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
-	
+
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
@@ -203,7 +181,7 @@ p64deb:	zjmp	%0
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
-	
+
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
@@ -214,7 +192,7 @@ p64deb:	zjmp	%0
 	zjmp	%0
 	zjmp	%0
 	zjmp	%0
-	
+
 p64:	ld	%10,r8
 	sub	r6,r8,r6
 	and	r6,%2147483648,r8
@@ -234,7 +212,7 @@ p64li:	live	%1
 tirdow:	ld	%425,r2
 	ld	%0,r3
 	ld	%4,r4
-	
+
 tird:	live	%42
 	sti	r10,%:fin,r2
 	sti	r10,%:fin,r3
@@ -245,7 +223,3 @@ tird:	live	%42
 	ld	%0,r11
 	zjmp	%:tird
 	zjmp	%:p1
-			
-fin:	live	%633
-
-

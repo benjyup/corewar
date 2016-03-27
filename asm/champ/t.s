@@ -7,4 +7,4 @@
 	add r1, r2, r3
 	sub r1, r2, r3
 	st r2, r3
-	st r2, 3 
+	st r2, 3
