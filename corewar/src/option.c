@@ -5,7 +5,7 @@
 ** Login   <peixot_b@epitech.net>
 ** 
 ** Started on  Thu Mar 24 11:20:52 2016 Peixoto Benjamin
-** Last update Sat Mar 26 15:25:33 2016 Peixoto Benjamin
+** Last update Sun Mar 27 18:07:56 2016 Peixoto Benjamin
 */
 
 #include <fcntl.h>
@@ -73,7 +73,7 @@ int		my_a_opt(t_mem *mem, char *str, char **av, int nb_champ)
     }
   if ((new_nb_champ = my_getnbr(str)) == -1)
     print_help(av[0]);
-  if (new_nb_champ >= 0 && new_nb_champ < 2147483647)
+  if (new_nb_champ >= 0 && new_nb_champ <= MEM_SIZE)
     mem->champ[nb_champ].offset = new_nb_champ;
   else
     print_help(av[0]);

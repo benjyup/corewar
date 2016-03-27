@@ -5,7 +5,7 @@
 ** Login   <mesqui_v@epitech.net>
 **
 ** Started on  Mon Mar 14 12:39:22 2016 vincent mesquita
-** Last update Sat Mar 26 15:57:45 2016 Peixoto Benjamin
+** Last update Sun Mar 27 18:09:15 2016 Peixoto Benjamin
 */
 
 #include <fcntl.h>
@@ -55,6 +55,7 @@ int		read_files2(t_mem *mem, char *buffer, int fd, int rank)
 	return (1);
       mem->champ[rank].size_ins += ret;
     }
+  return (0);
 }
 
 int		read_files(const char *name, t_mem *mem,
